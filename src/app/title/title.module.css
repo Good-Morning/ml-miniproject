@@ -1,0 +1,41 @@
+.title {
+    width: 100%;
+    height: 100%;
+    background-color: #EAD295;
+    display: inline-flex;
+}
+
+.title-rect {
+    margin-left: 61px;
+    width: 50px;
+    height: calc(100% - 2px);
+    background-color: #52ACAA;
+    border: 1px solid #000;
+}
+
+.title-name {
+    margin-left: -1px;
+    width: 400px;
+    height: calc(100% - 2px);
+    background-color: #FFF;
+    border: 1px solid #000;
+}
+
+.title-name-content {
+    width: fit-content;
+    height: fit-content;
+    margin: 22px auto 16px auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.title-login {
+    height: fit-content;
+    margin: auto 13px auto auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}

@@ -1,0 +1,3 @@
+{
+  "extends": ["@hellroot/stylelint-config"]
+}
