@@ -1,3 +1,20 @@
 .logo {
-	
+    background-color: white;
+    vertical-align: bottom;
+    height: 57px;
+    width: 250px;
+}
+
+.logo-wrapper {
+    margin: 36px auto auto auto;
+    display: block;
+    width: 250px;
+    height: 98px;
+    min-width: fit-content;
+}
+
+.logo-cover {
+    height: 20px;
+    background-color: #1e9390;
+    margin: 0px 18px;
 }

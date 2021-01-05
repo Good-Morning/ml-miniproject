@@ -2,9 +2,17 @@ import React from 'react';
 
 import styles from './menu.module.css';
 
+import Logo from './logo';
+
 interface IMenuState {};
 
 interface IMenuProps {};
+
+function MenuButton({name}: {name: string}) {
+	return <div className={styles['menu-button']}>
+		<div className={styles['menu-button-name']}>{name}</div>
+	</div>;
+}
 
 export default class Menu extends React.Component {
 
@@ -18,6 +26,15 @@ export default class Menu extends React.Component {
 	}
 
 	render() {
-		return <div className={styles["menu"]}></div>;
+		return <div className={styles["menu"]}>
+			<div className={styles['logo-wrapper']}>
+				<Logo />
+			</div>
+			<MenuButton name='My profile'/>
+			<MenuButton name='Saved'/>
+			<MenuButton name='Favourite authors'/>
+			<MenuButton name='Books for me'/>
+			<MenuButton name='Blogs for me'/>
+		</div>;
 	}
 }

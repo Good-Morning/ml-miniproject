@@ -7,11 +7,11 @@ function Title() {
 		<div className={styles["title-rect"]} />
 		<div className={styles["title-name"]}>
 			<div className={styles["title-name-content"]}>
-				{"Сохраненное"}
+				{"Saved"}
 			</div>
 		</div>
 		<div className={styles["title-login"]}>
-			{"Дарья Звягинцева | Выйти"}
+			{"Daria Zvjaginzeva | Log out"}
 		</div>
 	</div>;
 }
