@@ -9,7 +9,7 @@
   min-height: fit-content;
 
   transition-duration: 200ms;
-  background: #e5eaf0;
+  background: white;
   font-family: Roboto, Helvetica, sans-serif;
 }
 
@@ -28,6 +28,7 @@
 .menu-wrapper {
   width: 344px;
   height: 100%;
+  min-height: fit-content;
 }
 
 .main-page-wrapper {
