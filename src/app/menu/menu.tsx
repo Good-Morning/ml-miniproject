@@ -36,7 +36,7 @@ export default class Menu extends React.Component {
 				<Logo />
 			</div>
 			<MenuButton name='My profile' switcherFactory={switcherFactory} />
-			<MenuButton name='Saved' switcherFactory={switcherFactory} />
+			<MenuButton name='Liked' switcherFactory={switcherFactory} />
 			<MenuButton name='Favourite authors' switcherFactory={nop} />
 			<MenuButton name='Books for me' switcherFactory={switcherFactory} />
 			<MenuButton name='Publish' switcherFactory={switcherFactory} />
