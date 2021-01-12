@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './menu.module.css';
 
 import Logo from './logo';
+import { UserContext } from '../app';
 
 interface IMenuState {};
 
@@ -30,16 +31,23 @@ export default class Menu extends React.Component {
 	render() {
 		let that = this
 		let switcherFactory = (sheet: string) => () => that.props.switchTo(sheet)
-		let nop = (sheet: string) => () => alert('not implemented')
-		return <div className={styles["menu"]}>
-			<div className={styles['logo-wrapper']}>
-				<Logo />
-			</div>
-			<MenuButton name='My profile' switcherFactory={switcherFactory} />
-			<MenuButton name='Liked' switcherFactory={switcherFactory} />
-			<MenuButton name='Favourite authors' switcherFactory={nop} />
-			<MenuButton name='Books for me' switcherFactory={switcherFactory} />
-			<MenuButton name='Publish' switcherFactory={switcherFactory} />
-		</div>;
+		return <UserContext.Consumer>{ value => value.getter() !== null ? (
+				<div className={styles["menu"]}>
+					<div className={styles['logo-wrapper']}>
+						<Logo />
+					</div>
+					<MenuButton name='My profile' switcherFactory={switcherFactory} />
+					<MenuButton name='Liked' switcherFactory={switcherFactory} />
+					<MenuButton name='My books' switcherFactory={switcherFactory} />
+					<MenuButton name='Books for me' switcherFactory={switcherFactory} />
+					<MenuButton name='Publish' switcherFactory={switcherFactory} />
+				</div>
+			) : (
+				<div className={styles["menu"]}>
+					<div className={styles['logo-wrapper']}>
+						<Logo />
+					</div>
+				</div>
+			)}</UserContext.Consumer>;
 	}
 }

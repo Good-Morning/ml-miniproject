@@ -11,6 +11,8 @@
   transition-duration: 200ms;
   background: white;
   font-family: Roboto, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal; 
 }
 
 .app.app_dark-theme {

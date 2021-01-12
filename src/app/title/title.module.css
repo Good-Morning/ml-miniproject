@@ -15,7 +15,9 @@
 
 .title-name {
     margin-left: -1px;
-    width: 400px;
+    max-width: 400px;
+    width: 40%;
+    margin-right: 10px;
     height: calc(100% - 2px);
     background-color: #FFF;
     border: 1px solid #000;
@@ -25,8 +27,6 @@
     width: fit-content;
     height: fit-content;
     margin: 22px auto 16px auto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 30px;
     line-height: 35px;
 }
@@ -34,8 +34,11 @@
 .title-login {
     height: fit-content;
     margin: auto 13px auto auto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 16px;
+    white-space: nowrap;
+}
+
+.title-login-logout {
+    cursor: pointer;
 }

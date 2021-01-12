@@ -12,3 +12,22 @@
     margin: 41px 74px 20px 61px;
     min-height: fit-content;
 }
+
+.auth-wrapper {
+    margin: 129px auto 0 auto;
+    min-height: fit-content;
+}
+
+.publish-wrapper {
+    margin: 41px 50px 0 61px;
+    min-height: fit-content;
+}
+
+.content-failed {
+    width: 100%;
+    line-height: 30px;
+    color: white;
+    background: darkred;
+    text-align: center;
+    margin-bottom: -30px;
+}

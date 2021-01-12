@@ -3,6 +3,10 @@
     border: 3px solid #000000;
     width: 100%;
     min-height: fit-content;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
 }
 
 .post-top {
@@ -16,10 +20,9 @@
 .post-date {
     padding: 3px 0 0 0;
     width: fit-content;
-    font-style: normal;
-    font-weight: normal;
     font-size: 20px;
     line-height: 23px;
+    white-space: nowrap;
 }
 
 .post-like {
@@ -30,8 +33,6 @@
     width: 150px;
     height: 23px;
     padding: 8px 0 8px;
-    font-style: normal;
-    font-weight: normal;
     font-size: 20px;
     line-height: 23px;
 }
@@ -41,59 +42,61 @@
     border: 1px solid #000000;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 14px 0 18px 0;
-    margin: 0 65px 0 77px;
+    padding: 14px 10px 18px 10px;
+    margin: 0 auto;
+    width: 80%;
+    min-width: calc(100% - 140px);
     text-align: center;
-    font-style: normal;
-    font-weight: normal;
     font-size: 30px;
     line-height: 35px;
 }
 
 .post-middle {
-    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 9px 64px 11px 52px;
+    align-items: center;
+    min-height: 36px;
+    height: fit-content;
+    margin: 0 auto;
+    width: 80%;
+    min-width: calc(100% - 128px);
+    padding: 10px 0;
 }
 
 .post-tag {
-    font-style: normal;
-    font-weight: normal;
     font-size: 20px;
     line-height: 23px;
     padding: 6px 0 6px 0;
 }
 
 .post-author {
-    font-style: normal;
-    font-weight: normal;
     font-size: 30px;
     line-height: 35px;
+    text-align: end;
+    margin-left: 10px;
 }
 
 .post-content {
     background: white;
-    font-style: normal;
-    font-weight: normal;
     font-size: 20px;
     line-height: 23px;
-    margin: 0 51px 0 52px;
+    margin: 0 auto;
+    width: 70%;
+    min-width: calc(100% - 162px);
     padding: 24px 32px 29px 26px;
 }
 
 .post-bottom {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row-reverse;
     padding: 21px 49px 7px 50px;
 }
 
 .post-likes {
     display: flex;
     justify-items: bottom;
-    font-style: normal;
-    font-weight: normal;
+    padding-top: 5px;
     font-size: 20px;
     line-height: 23px;
     height: 24px;
@@ -105,8 +108,7 @@
 
 .post-tags {
     padding-top: 5px;
-    font-style: normal;
-    font-weight: normal;
     font-size: 20px;
     line-height: 23px;
+    text-align: right;
 }
