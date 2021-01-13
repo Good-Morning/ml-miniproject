@@ -15,7 +15,9 @@ export interface IBook {
 	tags: string[],
 	annotation: string,
 	book_id: number,
-	timestamp: string
+	timestamp: string,
+	_saved: boolean,
+	save: () => void
 };
 
 interface IContentState {
@@ -73,6 +75,14 @@ export default class Content extends React.Component {
 							.then(response => response.json())
 							.then(data => {
 								if (that.props.sheet === sheet) {
+									(data as IBook[]).forEach((value) => {
+										value.save = () => that.setState({json: that.state.json.map(book => {
+											if (book.book_id !== value.book_id) return book
+											let res: IBook = book
+											res._saved = true
+											return res
+										})})
+									})
 									that.setState({isFailed: false, doneFor: sheet, json: data})
 								}
 							});

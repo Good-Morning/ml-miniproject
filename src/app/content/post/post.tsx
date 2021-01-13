@@ -34,7 +34,7 @@ export default class Post extends React.Component {
 		return <div className={styles['post']}>
 			<div className={styles['post-top']}>
 				<div className={styles['post-date']}>{book.timestamp.split(' ')[0]}</div>
-				<UserContext.Consumer>{value => 
+				<UserContext.Consumer>{value => book._saved ? '' :
 					<div className={styles['post-like']} onClick={() => {
 						console.log("liked")
 						const user = value.getter()
@@ -49,6 +49,7 @@ export default class Post extends React.Component {
 						fetch('http://localhost:8080/save_book', requestOptions)
 									.then(res => {
 										if (res.ok) {
+											book.save()
 											return res
 										} else {
 											return Promise.reject(res)

@@ -26,8 +26,8 @@ function Publish() {
 				author: user.login,
 				authorId: user.id,
 				dateTime: new Date().getTime(),
-				genres: genres.split('\n'),
-				tags: tags.split('\n'),
+				genres: genres.split(';'),
+				tags: tags.split(';'),
 				content: annotation
 			})
 		};
@@ -50,8 +50,8 @@ function Publish() {
 	}}>
 		<div className={failedClass}>Failed</div>
 		<input type="text" className={styles['publish-title']} value={title} placeholder="Title" onChange={(event) => setTitle(event.target.value)} />
-		<input type="text" className={styles['publish-field']} value={genres} placeholder="Genres. Separate by new lines" onChange={(event) => setGenres(event.target.value)} />
-		<input type="text" className={styles['publish-field']} value={tags} placeholder="Tags. Separate by new lines" onChange={(event) => setTags(event.target.value)} />
+		<input type="text" className={styles['publish-field']} value={genres} placeholder="Genres. Separate by semicolumns" onChange={(event) => setGenres(event.target.value)} />
+		<input type="text" className={styles['publish-field']} value={tags} placeholder="Tags. Separate by semicolumns" onChange={(event) => setTags(event.target.value)} />
 		<input type="text" className={styles['publish-field']} value={annotation} placeholder="Annotation" onChange={(event) => setAnnotation(event.target.value)} />
 		<input type="submit" className={styles['publish-button'] + (busy ? ' '+styles['publish-button-busy'] : '')} value="Publish" />
 	</form>;
